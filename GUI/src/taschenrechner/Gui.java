@@ -29,6 +29,9 @@ public class Gui extends JFrame implements ActionListener{
 		initUI();
 	}
 	
+	/*
+	 * baut die Komponenten zusammen
+	 */
 	private void initUI() {
 		//Äußeres Panel
 		Container pane = getContentPane();
@@ -46,17 +49,14 @@ public class Gui extends JFrame implements ActionListener{
 		String[] top2 = {"clr","rtn","/"};
 		String[] number = {"7","8","9","*","4","5","6","+","1","2","3","-"};
 		String[] bottom = {",","0","="};
-		
 		//Die jeweiligen Panels für die jeweiigen Buttons
 		JPanel brackets = createGridPanel(bracket, 1, 2);
 		JPanel remove = createGridPanel(top2, 1, 3);
 		JPanel numbers = createGridPanel(number, 3, 4);
 		JPanel last = createGridPanel(bottom, 1, 3);
-		
 		//Anordnung der jeweiligen Panels durch den Layout Manager
 		gl.setHorizontalGroup(gl.createParallelGroup().addComponent(output).addComponent(brackets).addComponent(remove).addComponent(numbers).addComponent(last));
 		gl.setVerticalGroup(gl.createSequentialGroup().addComponent(output).addComponent(brackets).addComponent(remove).addComponent(numbers).addComponent(last));
-		
 		pack();
 		setTitle("Basic - Taschenrechner");
 		setLocation(3050, 240);

@@ -10,7 +10,7 @@ public class TaschenrechnerOperator1 {
 		return isValid(aufgabe);
 	}
 	
-	//Pr�ft ob Eingabe richtige Anzahl an Klammern hat
+	//Prüft ob Eingabe richtige Anzahl an Klammern hat
 	private String isValid(String aufgabe) {
 		aufgabe = aufgabe.replaceAll(" ", "");
  		int counter = 0;
