@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
-import test.TaschenrechnerOperator1;
+import test.TaschenrechnerOperator;
 
 
 @SuppressWarnings("serial")
@@ -93,7 +93,6 @@ public class Gui extends JFrame implements ActionListener{
 		output.setHorizontalAlignment(SwingConstants.RIGHT);
 		output.setBackground(Color.WHITE);
 		output.setMinimumSize(new Dimension(width, 55));
-		output.setEditable(false);
 		return output;
 	}
 	
@@ -124,6 +123,7 @@ public class Gui extends JFrame implements ActionListener{
 		}else if(e.getActionCommand().equals("rtn")) {
 			output.setText(output.getText().substring(0, output.getText().length()-1));
 		}else if(e.getActionCommand().equals("=")) {
+			sb = new StringBuilder(output.getText());
 			output.setText(getSum(sb.toString()));
 			setResult(true);
 		}else {
@@ -142,7 +142,7 @@ public class Gui extends JFrame implements ActionListener{
 	}
 	
 	private String getSum(String math) {
-		TaschenrechnerOperator1 rechner = new TaschenrechnerOperator1();
-		return rechner.getSum(output.getText().replaceAll("[,]", "."));
+		TaschenrechnerOperator rechner = new TaschenrechnerOperator();
+		return rechner.getResult(math.replaceAll("[,]", "."));
 	}
 }
