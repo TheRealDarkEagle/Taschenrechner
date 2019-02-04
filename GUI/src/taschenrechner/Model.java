@@ -55,11 +55,6 @@ public class Model extends JFrame {
 			taschenrechner.setVisible(true);
 		});
 	}
-
-	
-
-	
-	
 }
 
 	

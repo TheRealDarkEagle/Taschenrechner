@@ -155,7 +155,7 @@ public class TaschenrechnerOperator {
 	}
 		
 	/**
-	 * "Extrahiert" die rechte Zahl von Operator
+	 * "Extrahiert" die rechte Zahl vom Operator
 	 * @param task
 	 * @param istOperator
 	 * @return
