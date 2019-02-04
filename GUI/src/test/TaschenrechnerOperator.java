@@ -9,9 +9,7 @@ public class TaschenrechnerOperator {
 	public String getResult(String task) {
 		if(isValid(task)) {
 			task = task.replaceAll(" ", "");
-			System.out.print(task);
 			task = setMultiplyPoint(task);
-			System.out.print(" = ");
 			return (extractInParentheses(task));
 		}else {
 			System.out.println("Fehler bei Ihrer Eingabe! Bitte Ueberpruefen!: "+ task);
